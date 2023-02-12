@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.listBox_Prevision = new System.Windows.Forms.ListBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btn_afficher = new System.Windows.Forms.Button();
+            this.lb_prevision = new System.Windows.Forms.ListBox();
+            this.btn_ajouter = new System.Windows.Forms.Button();
+            this.tBox_Vent = new System.Windows.Forms.TextBox();
             this.tBox_Prop_Pluie = new System.Windows.Forms.TextBox();
             this.tBox_Quantité_Pluie = new System.Windows.Forms.TextBox();
             this.tBox_Min = new System.Windows.Forms.TextBox();
@@ -64,8 +64,8 @@
             this.groupBox1.Controls.Add(this.tBox_Ciel);
             this.groupBox1.Controls.Add(this.tBox_Prop_Pluie);
             this.groupBox1.Controls.Add(this.tBox_Quantité_Pluie);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.tBox_Vent);
+            this.groupBox1.Controls.Add(this.btn_ajouter);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(436, 381);
@@ -73,39 +73,39 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ajouter une prévision";
             // 
-            // button1
+            // btn_afficher
             // 
-            this.button1.Location = new System.Drawing.Point(454, 356);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(391, 29);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Afficher cette prévision";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_afficher.Location = new System.Drawing.Point(454, 356);
+            this.btn_afficher.Name = "btn_afficher";
+            this.btn_afficher.Size = new System.Drawing.Size(391, 29);
+            this.btn_afficher.TabIndex = 1;
+            this.btn_afficher.Text = "Afficher cette prévision";
+            this.btn_afficher.UseVisualStyleBackColor = true;
             // 
-            // listBox_Prevision
+            // lb_prevision
             // 
-            this.listBox_Prevision.FormattingEnabled = true;
-            this.listBox_Prevision.ItemHeight = 20;
-            this.listBox_Prevision.Location = new System.Drawing.Point(454, 22);
-            this.listBox_Prevision.Name = "listBox_Prevision";
-            this.listBox_Prevision.Size = new System.Drawing.Size(391, 324);
-            this.listBox_Prevision.TabIndex = 2;
+            this.lb_prevision.FormattingEnabled = true;
+            this.lb_prevision.ItemHeight = 20;
+            this.lb_prevision.Location = new System.Drawing.Point(454, 22);
+            this.lb_prevision.Name = "lb_prevision";
+            this.lb_prevision.Size = new System.Drawing.Size(391, 324);
+            this.lb_prevision.TabIndex = 2;
             // 
-            // button2
+            // btn_ajouter
             // 
-            this.button2.Location = new System.Drawing.Point(108, 344);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(203, 29);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Ajouter cette prévision";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_ajouter.Location = new System.Drawing.Point(108, 344);
+            this.btn_ajouter.Name = "btn_ajouter";
+            this.btn_ajouter.Size = new System.Drawing.Size(203, 29);
+            this.btn_ajouter.TabIndex = 3;
+            this.btn_ajouter.Text = "Ajouter cette prévision";
+            this.btn_ajouter.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // tBox_Vent
             // 
-            this.textBox2.Location = new System.Drawing.Point(227, 245);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(203, 27);
-            this.textBox2.TabIndex = 5;
+            this.tBox_Vent.Location = new System.Drawing.Point(227, 245);
+            this.tBox_Vent.Name = "tBox_Vent";
+            this.tBox_Vent.Size = new System.Drawing.Size(203, 27);
+            this.tBox_Vent.TabIndex = 5;
             // 
             // tBox_Prop_Pluie
             // 
@@ -217,8 +217,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(857, 405);
-            this.Controls.Add(this.listBox_Prevision);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lb_prevision);
+            this.Controls.Add(this.btn_afficher);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Prévision Météo";
@@ -243,10 +243,10 @@
         private TextBox tBox_Ciel;
         private TextBox tBox_Prop_Pluie;
         private TextBox tBox_Quantité_Pluie;
-        private TextBox textBox2;
-        private Button button2;
-        private Button button1;
-        private ListBox listBox_Prevision;
+        private TextBox tBox_Vent;
+        private Button btn_ajouter;
+        private Button btn_afficher;
+        private ListBox lb_prevision;
         private DateTimePicker dateTimePicker1;
     }
 }
