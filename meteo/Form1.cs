@@ -15,7 +15,7 @@ namespace meteo
 
             if (int.TryParse(tBox_Min.Text, out int result) == false)
             {
-                MessageBox.Show("Le format de la temp�rature minimale n'est pas valide!");
+                MessageBox.Show("Le format de la température minimale n'est pas valide!");
                 return;
             }
             else
@@ -25,7 +25,7 @@ namespace meteo
 
             if (int.TryParse(tBox_Max.Text, out int result1) == false)
             {
-                MessageBox.Show("Le format de la temp�rature maximale n'est pas valide!");
+                MessageBox.Show("Le format de la température maximale n'est pas valide!");
                 return;
             }
             else
@@ -37,17 +37,17 @@ namespace meteo
 
             if (double.TryParse(tBox_Prob_Pluie.Text, out double result2) == false)
             {
-                MessageBox.Show("Le format de la probabilit� de pluie n'est pas valide!");
+                MessageBox.Show("Le format de la probabilité de pluie n'est pas valide!");
                 return;
             }
             else
             {
-                nouvellePrevision.ProbabiliteinPluie = double.Parse(tBox_Prob_Pluie.Text) * 100;
+                nouvellePrevision.ProbabilitePluie = double.Parse(tBox_Prob_Pluie.Text) * 100;
             }
 
             if (int.TryParse(tBox_Quantite_Pluie.Text, out int result3) == false)
             {
-                MessageBox.Show("Le format de la quantit� de pluie n'est pas valide!");
+                MessageBox.Show("Le format de la quantité de pluie n'est pas valide!");
                 return;
             }
             else
@@ -67,12 +67,12 @@ namespace meteo
 
             if (double.Parse(tBox_Prob_Pluie.Text) > 1 | double.Parse(tBox_Prob_Pluie.Text) < 0)
             {
-                MessageBox.Show("La probabilit� de la pluie doit �tre en decimal ou positif!");
+                MessageBox.Show("La probabilitée de la pluie doit �tre en decimal ou positif!");
                 return;
             }
             if (DateTime.Now >= dateTimePicker.Value)
             {
-                MessageBox.Show("Vous ne pouvez par faire de pr�vision pour aujourd'hui ou dans le pass�");
+                MessageBox.Show("Vous ne pouvez par faire de prévision pour aujourd'hui ou dans le passé");
                 return;
             }
             lb_prevision.Items.Add(nouvellePrevision);
