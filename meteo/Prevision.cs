@@ -83,6 +83,7 @@ namespace meteo
                 }
             }
         }
+        
         public DateTime Date { get => date; set => date = value; }
     }
 }

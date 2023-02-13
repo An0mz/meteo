@@ -47,7 +47,6 @@
             this.btn_ajouter = new System.Windows.Forms.Button();
             this.btn_afficher = new System.Windows.Forms.Button();
             this.lb_prevision = new System.Windows.Forms.ListBox();
-            this.errorProv = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProv)).BeginInit();
             this.SuspendLayout();
@@ -216,10 +215,6 @@
             this.lb_prevision.Name = "lb_prevision";
             this.lb_prevision.Size = new System.Drawing.Size(391, 324);
             this.lb_prevision.TabIndex = 2;
-            // 
-            // errorProv
-            // 
-            this.errorProv.ContainerControl = this;
             // 
             // Form1
             // 

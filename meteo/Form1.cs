@@ -15,7 +15,7 @@ namespace meteo
 
             if (int.TryParse(tBox_Min.Text, out int result) == false)
             {
-                MessageBox.Show("Le format de la température minimale n'est pas valide!");
+                MessageBox.Show("Le format de la tempï¿½rature minimale n'est pas valide!");
                 return;
             }
             else
@@ -25,7 +25,7 @@ namespace meteo
 
             if (int.TryParse(tBox_Max.Text, out int result1) == false)
             {
-                MessageBox.Show("Le format de la température maximale n'est pas valide!");
+                MessageBox.Show("Le format de la tempï¿½rature maximale n'est pas valide!");
                 return;
             }
             else
@@ -37,22 +37,22 @@ namespace meteo
 
             if (double.TryParse(tBox_Prob_Pluie.Text, out double result2) == false)
             {
-                MessageBox.Show("Le format de la probabilité de pluie n'est pas valide!");
+                MessageBox.Show("Le format de la probabilitï¿½ de pluie n'est pas valide!");
                 return;
             }
             else
             {
-                nouvellePrevision.ProbabilitéPluie = double.Parse(tBox_Prob_Pluie.Text) * 100;
+                nouvellePrevision.Probabilitï¿½Pluie = double.Parse(tBox_Prob_Pluie.Text) * 100;
             }
 
-            if (int.TryParse(tBox_Quantité_Pluie.Text, out int result3) == false)
+            if (int.TryParse(tBox_Quantitï¿½_Pluie.Text, out int result3) == false)
             {
-                MessageBox.Show("Le format de la quantité de pluie n'est pas valide!");
+                MessageBox.Show("Le format de la quantitï¿½ de pluie n'est pas valide!");
                 return;
             }
             else
             {
-                nouvellePrevision.QuantitéPluie = int.Parse(tBox_Quantité_Pluie.Text);
+                nouvellePrevision.Quantitï¿½Pluie = int.Parse(tBox_Quantitï¿½_Pluie.Text);
             }
 
             if (int.TryParse(tBox_Vent.Text, out int result4) == false)
@@ -67,20 +67,24 @@ namespace meteo
 
             if (double.Parse(tBox_Prob_Pluie.Text) > 1 | double.Parse(tBox_Prob_Pluie.Text) < 0)
             {
-                MessageBox.Show("La probabilité de la pluie doit être en decimal ou positif!");
+                MessageBox.Show("La probabilitï¿½ de la pluie doit ï¿½tre en decimal ou positif!");
                 return;
             }
             if (DateTime.Now >= dateTimePicker.Value)
             {
-                MessageBox.Show("Vous ne pouvez par faire de prévision pour aujourd'hui ou dans le passé");
+                MessageBox.Show("Vous ne pouvez par faire de prï¿½vision pour aujourd'hui ou dans le passï¿½");
                 return;
             }
             lb_prevision.Items.Add(nouvellePrevision);
         }
-
+        
         private void btn_afficher_Click(object sender, EventArgs e)
         {
-
+            Prevision nouvellePrevision = (Prevision)lb_prevision.SelectedItem;
+            if (nouvellePrevision != null)
+            {
+                MessageBox.Show("Le " + nouvellePrevision.Date.ToShortDateString() + ", la temperature sera entre " + nouvellePrevision.TemperatureMin.ToString() + " et " + nouvellePrevision.TemperatureMax.ToString() + "ï¿½C. Le ciel sera " + nouvellePrevision.Ciel + " et la probablilitï¿½e de pluie est de " + nouvellePrevision.Probabilitï¿½Pluie.ToString() + "%. On attend environ " + nouvellePrevision.Quantitï¿½Pluie.ToString() + "mm et des vent de " + nouvellePrevision.VitesseVent.ToString() + "Km/H.");
+            }
         }
     }
 }
