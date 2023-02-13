@@ -2,14 +2,14 @@ namespace meteo
 {
     public partial class Form1 : Form
     {
-        List<Prévision> previsions = new List<Prévision>();
+        List<Prevision> previsions = new List<Prevision>();
         public Form1()
         {
             InitializeComponent();
         }
         private void btn_ajouter_Click(object sender, EventArgs e)
         {
-            Prévision nouvellePrevision = new Prévision();
+            Prevision nouvellePrevision = new Prevision();
             nouvellePrevision.Date = dateTimePicker.Value;
             
 
@@ -76,14 +76,6 @@ namespace meteo
                 return;
             }
             lb_prevision.Items.Add(nouvellePrevision);
-            //if (lb_prevision.Items.Contains("Prévision : " + date.Date.ToShortDateString()))
-            //{
-            //    MessageBox.Show("Vous ne pouvez pas faire plusieur prévision pour la même journée!");
-            //}
-            //else
-            //{
-            //    lb_prevision.Items.Add("Prévision : " + date.Date.ToShortDateString());
-            //}
         }
 
         private void btn_afficher_Click(object sender, EventArgs e)

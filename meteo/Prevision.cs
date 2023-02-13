@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace meteo
 {
-    public class Prévision
+    public class Prevision
     {
         private int temperatureMin;
         private int temperatureMax;
