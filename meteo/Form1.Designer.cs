@@ -189,7 +189,7 @@
             // 
             // btn_ajouter
             // 
-            this.btn_ajouter.Location = new System.Drawing.Point(108, 344);
+            this.btn_ajouter.Location = new System.Drawing.Point(227, 344);
             this.btn_ajouter.Name = "btn_ajouter";
             this.btn_ajouter.Size = new System.Drawing.Size(203, 29);
             this.btn_ajouter.TabIndex = 3;
