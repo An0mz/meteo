@@ -11,8 +11,8 @@ namespace meteo
         private int temperatureMin;
         private int temperatureMax;
         private string ciel = "";
-        private double probabilitéPluie;
-        private int quantitéPluie;
+        private double probabilitePluie;
+        private int quantitePluie;
         private int vitesseVent;
         private DateTime date;
         private int fahrenheit;
@@ -44,29 +44,29 @@ namespace meteo
             }
         }
         public string Ciel { get => ciel; set => ciel = value; }
-        public double ProbabilitéPluie { get => probabilitéPluie;
+        public double ProbabilitePluie { get => probabilitePluie;
             set
             {
                 if (value < 0)
                 {
-                    probabilitéPluie = 0;
+                    probabilitePluie = 0;
                 }
                 else
                 {
-                    probabilitéPluie = value;
+                    probabilitePluie = value;
                 }
             }
         }
-        public int QuantitéPluie { get => quantitéPluie;
+        public int QuantitePluie { get => quantitePluie;
             set
             {
                 if (value < 0)
                 {
-                    quantitéPluie = 0;
+                    quantitePluie = 0;
                 }
                 else
                 {
-                    quantitéPluie = value;
+                    quantitePluie = value;
                 }
             }
         }
@@ -83,7 +83,6 @@ namespace meteo
                 }
             }
         }
-        
         public DateTime Date { get => date; set => date = value; }
     }
 }

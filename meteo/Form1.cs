@@ -42,17 +42,17 @@ namespace meteo
             }
             else
             {
-                nouvellePrevision.Probabilit�Pluie = double.Parse(tBox_Prob_Pluie.Text) * 100;
+                nouvellePrevision.ProbabilitePluie = double.Parse(tBox_Prob_Pluie.Text) * 100;
             }
 
-            if (int.TryParse(tBox_Quantit�_Pluie.Text, out int result3) == false)
+            if (int.TryParse(tBox_Quantite_Pluie.Text, out int result3) == false)
             {
                 MessageBox.Show("Le format de la quantit� de pluie n'est pas valide!");
                 return;
             }
             else
             {
-                nouvellePrevision.Quantit�Pluie = int.Parse(tBox_Quantit�_Pluie.Text);
+                nouvellePrevision.QuantitePluie = int.Parse(tBox_Quantite_Pluie.Text);
             }
 
             if (int.TryParse(tBox_Vent.Text, out int result4) == false)
@@ -83,7 +83,7 @@ namespace meteo
             Prevision nouvellePrevision = (Prevision)lb_prevision.SelectedItem;
             if (nouvellePrevision != null)
             {
-                MessageBox.Show("Le " + nouvellePrevision.Date.ToShortDateString() + ", la temperature sera entre " + nouvellePrevision.TemperatureMin.ToString() + " et " + nouvellePrevision.TemperatureMax.ToString() + "�C. Le ciel sera " + nouvellePrevision.Ciel + " et la probablilit�e de pluie est de " + nouvellePrevision.Probabilit�Pluie.ToString() + "%. On attend environ " + nouvellePrevision.Quantit�Pluie.ToString() + "mm et des vent de " + nouvellePrevision.VitesseVent.ToString() + "Km/H.");
+                MessageBox.Show("Le " + nouvellePrevision.Date.ToShortDateString() + ", la temperature sera entre " + nouvellePrevision.TemperatureMin.ToString() + " et " + nouvellePrevision.TemperatureMax.ToString() + "�C. Le ciel sera " + nouvellePrevision.Ciel + " et la probablilit�e de pluie est de " + nouvellePrevision.ProbabilitePluie.ToString() + "%. On attend environ " + nouvellePrevision.QuantitePluie.ToString() + "mm et des vent de " + nouvellePrevision.VitesseVent.ToString() + "Km/H.");
             }
         }
     }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
@@ -42,13 +41,12 @@
             this.tBox_Max = new System.Windows.Forms.TextBox();
             this.tBox_Ciel = new System.Windows.Forms.TextBox();
             this.tBox_Prob_Pluie = new System.Windows.Forms.TextBox();
-            this.tBox_Quantité_Pluie = new System.Windows.Forms.TextBox();
+            this.tBox_Quantite_Pluie = new System.Windows.Forms.TextBox();
             this.tBox_Vent = new System.Windows.Forms.TextBox();
             this.btn_ajouter = new System.Windows.Forms.Button();
             this.btn_afficher = new System.Windows.Forms.Button();
             this.lb_prevision = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProv)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -65,7 +63,7 @@
             this.groupBox1.Controls.Add(this.tBox_Max);
             this.groupBox1.Controls.Add(this.tBox_Ciel);
             this.groupBox1.Controls.Add(this.tBox_Prob_Pluie);
-            this.groupBox1.Controls.Add(this.tBox_Quantité_Pluie);
+            this.groupBox1.Controls.Add(this.tBox_Quantite_Pluie);
             this.groupBox1.Controls.Add(this.tBox_Vent);
             this.groupBox1.Controls.Add(this.btn_ajouter);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -173,12 +171,12 @@
             this.tBox_Prob_Pluie.Size = new System.Drawing.Size(203, 27);
             this.tBox_Prob_Pluie.TabIndex = 7;
             // 
-            // tBox_Quantité_Pluie
+            // tBox_Quantite_Pluie
             // 
-            this.tBox_Quantité_Pluie.Location = new System.Drawing.Point(227, 202);
-            this.tBox_Quantité_Pluie.Name = "tBox_Quantité_Pluie";
-            this.tBox_Quantité_Pluie.Size = new System.Drawing.Size(203, 27);
-            this.tBox_Quantité_Pluie.TabIndex = 6;
+            this.tBox_Quantite_Pluie.Location = new System.Drawing.Point(227, 202);
+            this.tBox_Quantite_Pluie.Name = "tBox_Quantite_Pluie";
+            this.tBox_Quantite_Pluie.Size = new System.Drawing.Size(203, 27);
+            this.tBox_Quantite_Pluie.TabIndex = 6;
             // 
             // tBox_Vent
             // 
@@ -228,7 +226,6 @@
             this.Text = "Prévision Météo";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProv)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -247,7 +244,7 @@
         private TextBox tBox_Max;
         private TextBox tBox_Ciel;
         private TextBox tBox_Prob_Pluie;
-        private TextBox tBox_Quantité_Pluie;
+        private TextBox tBox_Quantite_Pluie;
         private TextBox tBox_Vent;
         private Button btn_ajouter;
         private Button btn_afficher;
