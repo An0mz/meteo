@@ -42,7 +42,7 @@ namespace meteo
             }
             else
             {
-                nouvellePrevision.ProbabilitePluie = double.Parse(tBox_Prob_Pluie.Text) * 100;
+                nouvellePrevision.ProbabiliteinPluie = double.Parse(tBox_Prob_Pluie.Text) * 100;
             }
 
             if (int.TryParse(tBox_Quantite_Pluie.Text, out int result3) == false)
