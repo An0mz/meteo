@@ -2,19 +2,17 @@ namespace meteo
 {
     public partial class Form1 : Form
     {
-        Prévision min = new Prévision();
-        Prévision max = new Prévision();
-        Prévision ciel = new Prévision();
-        Prévision probPluie = new Prévision();
-        Prévision quantPluie = new Prévision();
-        Prévision vent = new Prévision();
-        Prévision date = new Prévision();
+        List<Prévision> previsions = new List<Prévision>();
         public Form1()
         {
             InitializeComponent();
         }
         private void btn_ajouter_Click(object sender, EventArgs e)
         {
+            Prévision nouvellePrevision = new Prévision();
+            nouvellePrevision.Date = dateTimePicker.Value;
+            
+
             if (int.TryParse(tBox_Min.Text, out int result) == false)
             {
                 MessageBox.Show("Le format de la température minimale n'est pas valide!");
@@ -22,7 +20,7 @@ namespace meteo
             }
             else
             {
-                min.TemperatureMin = int.Parse(tBox_Min.Text);
+                nouvellePrevision.TemperatureMin = int.Parse(tBox_Min.Text);
             }
 
             if (int.TryParse(tBox_Max.Text, out int result1) == false)
@@ -32,10 +30,10 @@ namespace meteo
             }
             else
             {
-                max.TemperatureMax = int.Parse(tBox_Max.Text);
+                nouvellePrevision.TemperatureMax = int.Parse(tBox_Max.Text);
             }
 
-            ciel.Ciel = tBox_Ciel.Text;
+            nouvellePrevision.Ciel = tBox_Ciel.Text;
 
             if (double.TryParse(tBox_Prob_Pluie.Text, out double result2) == false)
             {
@@ -44,7 +42,7 @@ namespace meteo
             }
             else
             {
-                probPluie.ProbabilitéPluie = double.Parse(tBox_Prob_Pluie.Text) * 100;
+                nouvellePrevision.ProbabilitéPluie = double.Parse(tBox_Prob_Pluie.Text) * 100;
             }
 
             if (int.TryParse(tBox_Quantité_Pluie.Text, out int result3) == false)
@@ -54,7 +52,7 @@ namespace meteo
             }
             else
             {
-                quantPluie.QuantitéPluie = int.Parse(tBox_Quantité_Pluie.Text);
+                nouvellePrevision.QuantitéPluie = int.Parse(tBox_Quantité_Pluie.Text);
             }
 
             if (int.TryParse(tBox_Vent.Text, out int result4) == false)
@@ -64,10 +62,8 @@ namespace meteo
             }
             else
             {
-                vent.VitesseVent = int.Parse(tBox_Vent.Text);
+                nouvellePrevision.VitesseVent = int.Parse(tBox_Vent.Text);
             }
-
-            date.Date = dateTimePicker.Value;
 
             if (double.Parse(tBox_Prob_Pluie.Text) > 1 | double.Parse(tBox_Prob_Pluie.Text) < 0)
             {
@@ -79,14 +75,15 @@ namespace meteo
                 MessageBox.Show("Vous ne pouvez par faire de prévision pour aujourd'hui ou dans le passé");
                 return;
             }
-            if (lb_prevision.Items.Contains("Prévision : " + date.Date.ToShortDateString()))
-            {
-                MessageBox.Show("Vous ne pouvez pas faire plusieur prévision pour la même journée!");
-            }
-            else
-            {
-                lb_prevision.Items.Add(Name = "Prévision : " + date.Date.ToShortDateString());
-            }
+            lb_prevision.Items.Add(nouvellePrevision);
+            //if (lb_prevision.Items.Contains("Prévision : " + date.Date.ToShortDateString()))
+            //{
+            //    MessageBox.Show("Vous ne pouvez pas faire plusieur prévision pour la même journée!");
+            //}
+            //else
+            //{
+            //    lb_prevision.Items.Add("Prévision : " + date.Date.ToShortDateString());
+            //}
         }
 
         private void btn_afficher_Click(object sender, EventArgs e)
