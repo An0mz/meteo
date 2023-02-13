@@ -149,7 +149,6 @@
             this.tBox_Min.Name = "tBox_Min";
             this.tBox_Min.Size = new System.Drawing.Size(203, 27);
             this.tBox_Min.TabIndex = 10;
-            this.tBox_Min.Text = "0";
             // 
             // tBox_Max
             // 
@@ -157,7 +156,6 @@
             this.tBox_Max.Name = "tBox_Max";
             this.tBox_Max.Size = new System.Drawing.Size(203, 27);
             this.tBox_Max.TabIndex = 9;
-            this.tBox_Max.Text = "0";
             // 
             // tBox_Ciel
             // 

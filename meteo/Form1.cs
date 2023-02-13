@@ -37,7 +37,14 @@ namespace meteo
                 MessageBox.Show("Vous ne pouvez par faire de prévision pour aujourd'hui ou dans le passé");
                 return;
             }
-            lb_prevision.Items.Add("Prévision : " + date.Date.ToShortDateString());
+            if (lb_prevision.Items.Contains("Prévision : " + date.Date.ToShortDateString()))
+            {
+                MessageBox.Show("Vous ne pouvez pas faire plusieur prévision pour la même journée!");
+            }
+            else
+            {
+                lb_prevision.Items.Add(Name = "Prévision : " + date.Date.ToShortDateString());
+            }
         }
 
         private void btn_afficher_Click(object sender, EventArgs e)
