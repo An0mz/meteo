@@ -44,9 +44,45 @@ namespace meteo
             }
         }
         public string Ciel { get => ciel; set => ciel = value; }
-        public double ProbabilitéPluie { get => probabilitéPluie; set => probabilitéPluie = value; }
-        public int QuantitéPluie { get => quantitéPluie; set => quantitéPluie = value; }
-        public int VitesseVent { get => vitesseVent; set => vitesseVent = value; }
+        public double ProbabilitéPluie { get => probabilitéPluie;
+            set
+            {
+                if (value < 0)
+                {
+                    probabilitéPluie = 0;
+                }
+                else
+                {
+                    probabilitéPluie = value;
+                }
+            }
+        }
+        public int QuantitéPluie { get => quantitéPluie;
+            set
+            {
+                if (value < 0)
+                {
+                    quantitéPluie = 0;
+                }
+                else
+                {
+                    quantitéPluie = value;
+                }
+            }
+        }
+        public int VitesseVent { get => vitesseVent;
+            set
+            {
+                if (value < 0)
+                {
+                    vitesseVent = 0;
+                }
+                else
+                {
+                    vitesseVent = value;
+                }
+            }
+        }
         public DateTime Date { get => date; set => date = value; }
     }
 }

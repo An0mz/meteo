@@ -27,20 +27,17 @@ namespace meteo
             quantPluie.QuantitéPluie = int.Parse(tBox_Quantité_Pluie.Text);
             vent.VitesseVent = int.Parse(tBox_Vent.Text);
             date.Date = dateTimePicker.Value;
-            MessageBox.Show(min.TemperatureMin.ToString());
-            MessageBox.Show(max.TemperatureMin.ToString());
-            MessageBox.Show(ciel.Ciel.ToString());
             if (double.Parse(tBox_Prob_Pluie.Text) > 1)
             {
                 MessageBox.Show("La probabilité de la pluie doit être en decimal!");
+                return;
             }
-            else
+            if (DateTime.Now >= dateTimePicker.Value)
             {
-                MessageBox.Show(probPluie.ProbabilitéPluie.ToString() + "%");
+                MessageBox.Show("Vous ne pouvez par faire de prévision pour aujourd'hui ou dans le passé");
+                return;
             }
-            MessageBox.Show(quantPluie.QuantitéPluie.ToString() + "mm");
-            MessageBox.Show(vent.VitesseVent.ToString() + "Km/H");
-            MessageBox.Show(date.Date.ToShortDateString());
+            lb_prevision.Items.Add("Prévision : " + date.Date.ToShortDateString());
         }
 
         private void btn_afficher_Click(object sender, EventArgs e)
