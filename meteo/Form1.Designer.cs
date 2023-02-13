@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_afficher = new System.Windows.Forms.Button();
-            this.lb_prevision = new System.Windows.Forms.ListBox();
-            this.btn_ajouter = new System.Windows.Forms.Button();
-            this.tBox_Vent = new System.Windows.Forms.TextBox();
-            this.tBox_Prop_Pluie = new System.Windows.Forms.TextBox();
-            this.tBox_Quantité_Pluie = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.tBox_Min = new System.Windows.Forms.TextBox();
             this.tBox_Max = new System.Windows.Forms.TextBox();
             this.tBox_Ciel = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.tBox_Prop_Pluie = new System.Windows.Forms.TextBox();
+            this.tBox_Quantité_Pluie = new System.Windows.Forms.TextBox();
+            this.tBox_Vent = new System.Windows.Forms.TextBox();
+            this.btn_ajouter = new System.Windows.Forms.Button();
+            this.btn_afficher = new System.Windows.Forms.Button();
+            this.lb_prevision = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,53 +73,75 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ajouter une prévision";
             // 
-            // btn_afficher
+            // dateTimePicker1
             // 
-            this.btn_afficher.Location = new System.Drawing.Point(454, 356);
-            this.btn_afficher.Name = "btn_afficher";
-            this.btn_afficher.Size = new System.Drawing.Size(391, 29);
-            this.btn_afficher.TabIndex = 1;
-            this.btn_afficher.Text = "Afficher cette prévision";
-            this.btn_afficher.UseVisualStyleBackColor = true;
+            this.dateTimePicker1.Location = new System.Drawing.Point(227, 297);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(203, 27);
+            this.dateTimePicker1.TabIndex = 18;
             // 
-            // lb_prevision
+            // label8
             // 
-            this.lb_prevision.FormattingEnabled = true;
-            this.lb_prevision.ItemHeight = 20;
-            this.lb_prevision.Location = new System.Drawing.Point(454, 22);
-            this.lb_prevision.Name = "lb_prevision";
-            this.lb_prevision.Size = new System.Drawing.Size(391, 324);
-            this.lb_prevision.TabIndex = 2;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 290);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(48, 20);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Date :";
             // 
-            // btn_ajouter
+            // label6
             // 
-            this.btn_ajouter.Location = new System.Drawing.Point(108, 344);
-            this.btn_ajouter.Name = "btn_ajouter";
-            this.btn_ajouter.Size = new System.Drawing.Size(203, 29);
-            this.btn_ajouter.TabIndex = 3;
-            this.btn_ajouter.Text = "Ajouter cette prévision";
-            this.btn_ajouter.UseVisualStyleBackColor = true;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 248);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(169, 20);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Vitesse du vent (Km/h) : ";
             // 
-            // tBox_Vent
+            // label7
             // 
-            this.tBox_Vent.Location = new System.Drawing.Point(227, 245);
-            this.tBox_Vent.Name = "tBox_Vent";
-            this.tBox_Vent.Size = new System.Drawing.Size(203, 27);
-            this.tBox_Vent.TabIndex = 5;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 205);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(171, 20);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Quantité de pluie (mm) :";
             // 
-            // tBox_Prop_Pluie
+            // label4
             // 
-            this.tBox_Prop_Pluie.Location = new System.Drawing.Point(227, 160);
-            this.tBox_Prop_Pluie.Name = "tBox_Prop_Pluie";
-            this.tBox_Prop_Pluie.Size = new System.Drawing.Size(203, 27);
-            this.tBox_Prop_Pluie.TabIndex = 7;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 163);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(151, 20);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Probabilité de pluie : ";
             // 
-            // tBox_Quantité_Pluie
+            // label5
             // 
-            this.tBox_Quantité_Pluie.Location = new System.Drawing.Point(227, 202);
-            this.tBox_Quantité_Pluie.Name = "tBox_Quantité_Pluie";
-            this.tBox_Quantité_Pluie.Size = new System.Drawing.Size(203, 27);
-            this.tBox_Quantité_Pluie.TabIndex = 6;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 120);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(41, 20);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Ciel :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 77);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(161, 20);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Température maximal :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 35);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(166, 20);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Température minimale :";
             // 
             // tBox_Min
             // 
@@ -142,75 +164,54 @@
             this.tBox_Ciel.Size = new System.Drawing.Size(203, 27);
             this.tBox_Ciel.TabIndex = 8;
             // 
-            // label2
+            // tBox_Prop_Pluie
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 35);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(166, 20);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Température minimale :";
+            this.tBox_Prop_Pluie.Location = new System.Drawing.Point(227, 160);
+            this.tBox_Prop_Pluie.Name = "tBox_Prop_Pluie";
+            this.tBox_Prop_Pluie.Size = new System.Drawing.Size(203, 27);
+            this.tBox_Prop_Pluie.TabIndex = 7;
             // 
-            // label3
+            // tBox_Quantité_Pluie
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 77);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(161, 20);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Température maximal :";
+            this.tBox_Quantité_Pluie.Location = new System.Drawing.Point(227, 202);
+            this.tBox_Quantité_Pluie.Name = "tBox_Quantité_Pluie";
+            this.tBox_Quantité_Pluie.Size = new System.Drawing.Size(203, 27);
+            this.tBox_Quantité_Pluie.TabIndex = 6;
             // 
-            // label4
+            // tBox_Vent
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 163);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(151, 20);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Probabilité de pluie : ";
+            this.tBox_Vent.Location = new System.Drawing.Point(227, 245);
+            this.tBox_Vent.Name = "tBox_Vent";
+            this.tBox_Vent.Size = new System.Drawing.Size(203, 27);
+            this.tBox_Vent.TabIndex = 5;
             // 
-            // label5
+            // btn_ajouter
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 120);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 20);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Ciel :";
+            this.btn_ajouter.Location = new System.Drawing.Point(108, 344);
+            this.btn_ajouter.Name = "btn_ajouter";
+            this.btn_ajouter.Size = new System.Drawing.Size(203, 29);
+            this.btn_ajouter.TabIndex = 3;
+            this.btn_ajouter.Text = "Ajouter cette prévision";
+            this.btn_ajouter.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // btn_afficher
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 248);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(169, 20);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Vitesse du vent (Km/h) : ";
+            this.btn_afficher.Location = new System.Drawing.Point(454, 356);
+            this.btn_afficher.Name = "btn_afficher";
+            this.btn_afficher.Size = new System.Drawing.Size(391, 29);
+            this.btn_afficher.TabIndex = 1;
+            this.btn_afficher.Text = "Afficher cette prévision";
+            this.btn_afficher.UseVisualStyleBackColor = true;
+            this.btn_afficher.Click += new System.EventHandler(this.btn_afficher_Click);
             // 
-            // label7
+            // lb_prevision
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 205);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(171, 20);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Quantité de pluie (mm) :";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 290);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 20);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "Date :";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(227, 297);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(203, 27);
-            this.dateTimePicker1.TabIndex = 18;
+            this.lb_prevision.FormattingEnabled = true;
+            this.lb_prevision.ItemHeight = 20;
+            this.lb_prevision.Location = new System.Drawing.Point(454, 22);
+            this.lb_prevision.Name = "lb_prevision";
+            this.lb_prevision.Size = new System.Drawing.Size(391, 324);
+            this.lb_prevision.TabIndex = 2;
             // 
             // Form1
             // 
