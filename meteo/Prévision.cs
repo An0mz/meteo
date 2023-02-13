@@ -10,18 +10,43 @@ namespace meteo
     {
         private int temperatureMin;
         private int temperatureMax;
-        private string ciel;
-        private int probabilitéPluie;
+        private string ciel = "Couvert";
+        private double probabilitéPluie;
         private int quantitéPluie;
         private int vitesseVent;
-        private int date;
+        private DateTime date;
+        private int fahrenheit;
 
-        public int TemperatureMin { get => temperatureMin; set => temperatureMin = value; }
-        public int TemperatureMax { get => temperatureMax; set => temperatureMax = value; }
+        public int TemperatureMin { get => temperatureMin; 
+            set
+            {
+                if (value < -274)
+                {
+                    temperatureMin = -273;
+                }
+                else
+                {
+                    temperatureMin = value;
+                }
+            }
+        }
+        public int TemperatureMax { get => temperatureMax; 
+            set
+            {
+                if (value > 100)
+                {
+                    temperatureMax = 100;
+                }
+                else
+                {
+                    temperatureMax = value;
+                }
+            }
+        }
         public string Ciel { get => ciel; set => ciel = value; }
-        public int ProbabilitéPluie { get => probabilitéPluie; set => probabilitéPluie = value; }
+        public double ProbabilitéPluie { get => probabilitéPluie; set => probabilitéPluie = value; }
         public int QuantitéPluie { get => quantitéPluie; set => quantitéPluie = value; }
         public int VitesseVent { get => vitesseVent; set => vitesseVent = value; }
-        public int Date { get => date; set => date = value; }
+        public DateTime Date { get => date; set => date = value; }
     }
 }
