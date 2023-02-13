@@ -10,7 +10,7 @@ namespace meteo
     {
         private int temperatureMin;
         private int temperatureMax;
-        private string ciel = "Couvert";
+        private string ciel = "";
         private double probabilitéPluie;
         private int quantitéPluie;
         private int vitesseVent;

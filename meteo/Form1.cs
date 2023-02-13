@@ -13,23 +13,65 @@ namespace meteo
         {
             InitializeComponent();
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
         private void btn_ajouter_Click(object sender, EventArgs e)
         {
-            min.TemperatureMin = int.Parse(tBox_Min.Text);
-            max.TemperatureMax = int.Parse(tBox_Max.Text);
-            ciel.Ciel = tBox_Ciel.Text;
-            probPluie.ProbabilitéPluie = double.Parse(tBox_Prob_Pluie.Text) * 100;
-            quantPluie.QuantitéPluie = int.Parse(tBox_Quantité_Pluie.Text);
-            vent.VitesseVent = int.Parse(tBox_Vent.Text);
-            date.Date = dateTimePicker.Value;
-            if (double.Parse(tBox_Prob_Pluie.Text) > 1)
+            if (int.TryParse(tBox_Min.Text, out int result) == false)
             {
-                MessageBox.Show("La probabilité de la pluie doit être en decimal!");
+                MessageBox.Show("Le format de la température minimale n'est pas valide!");
+                return;
+            }
+            else
+            {
+                min.TemperatureMin = int.Parse(tBox_Min.Text);
+            }
+
+            if (int.TryParse(tBox_Max.Text, out int result1) == false)
+            {
+                MessageBox.Show("Le format de la température maximale n'est pas valide!");
+                return;
+            }
+            else
+            {
+                max.TemperatureMax = int.Parse(tBox_Max.Text);
+            }
+
+            ciel.Ciel = tBox_Ciel.Text;
+
+            if (double.TryParse(tBox_Prob_Pluie.Text, out double result2) == false)
+            {
+                MessageBox.Show("Le format de la probabilité de pluie n'est pas valide!");
+                return;
+            }
+            else
+            {
+                probPluie.ProbabilitéPluie = double.Parse(tBox_Prob_Pluie.Text) * 100;
+            }
+
+            if (int.TryParse(tBox_Quantité_Pluie.Text, out int result3) == false)
+            {
+                MessageBox.Show("Le format de la quantité de pluie n'est pas valide!");
+                return;
+            }
+            else
+            {
+                quantPluie.QuantitéPluie = int.Parse(tBox_Quantité_Pluie.Text);
+            }
+
+            if (int.TryParse(tBox_Vent.Text, out int result4) == false)
+            {
+                MessageBox.Show("Le format de la vitesse du vent n'est pas valide!");
+                return;
+            }
+            else
+            {
+                vent.VitesseVent = int.Parse(tBox_Vent.Text);
+            }
+
+            date.Date = dateTimePicker.Value;
+
+            if (double.Parse(tBox_Prob_Pluie.Text) > 1 | double.Parse(tBox_Prob_Pluie.Text) < 0)
+            {
+                MessageBox.Show("La probabilité de la pluie doit être en decimal ou positif!");
                 return;
             }
             if (DateTime.Now >= dateTimePicker.Value)

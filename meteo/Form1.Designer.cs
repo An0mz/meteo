@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
@@ -46,7 +47,9 @@
             this.btn_ajouter = new System.Windows.Forms.Button();
             this.btn_afficher = new System.Windows.Forms.Button();
             this.lb_prevision = new System.Windows.Forms.ListBox();
+            this.errorProv = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProv)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -214,6 +217,10 @@
             this.lb_prevision.Size = new System.Drawing.Size(391, 324);
             this.lb_prevision.TabIndex = 2;
             // 
+            // errorProv
+            // 
+            this.errorProv.ContainerControl = this;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -224,9 +231,9 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Prévision Météo";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProv)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -251,5 +258,6 @@
         private Button btn_afficher;
         private ListBox lb_prevision;
         private DateTimePicker dateTimePicker;
+        private ErrorProvider errorProv;
     }
 }
