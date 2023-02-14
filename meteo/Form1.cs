@@ -80,7 +80,26 @@ namespace meteo
                 MessageBox.Show("Vous ne pouvez par faire de prévision pour aujourd'hui ou dans le passé");
                 return;
             }
+            foreach (Prevision prevision in lb_prevision.Items)
+            {
+                if (prevision.Date == dateTimePicker.Value)
+                {
+                    MessageBox.Show("Une prévision existe déjà pour cette journée!");
+                    return;
+                }
+            }
             lb_prevision.Items.Add(nouvellePrevision);
+            ViderTextBox();
+        }
+
+        private void ViderTextBox()
+        {
+            tBox_Min.Clear();
+            tBox_Max.Clear();
+            tBox_Ciel.Clear();
+            tBox_Prob_Pluie.Clear();
+            tBox_Quantite_Pluie.Clear();
+            tBox_Vent.Clear();
         }
         
         private void btn_afficher_Click(object sender, EventArgs e)

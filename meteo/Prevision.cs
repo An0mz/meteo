@@ -20,7 +20,7 @@ namespace meteo
         public int TemperatureMin { get => temperatureMin; 
             set
             {
-                if (value < -274)
+                if (value <= -274)
                 {
                     temperatureMin = -273;
                 }
@@ -64,6 +64,10 @@ namespace meteo
                 {
                     quantitePluie = 0;
                 }
+                if (value > 50)
+                {
+                    quantitePluie = 50;
+                }
                 else
                 {
                     quantitePluie = value;
@@ -76,6 +80,10 @@ namespace meteo
                 if (value < 0)
                 {
                     vitesseVent = 0;
+                }
+                if (value > 200)
+                {
+                    vitesseVent = 200;
                 }
                 else
                 {
