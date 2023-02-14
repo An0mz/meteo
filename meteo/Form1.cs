@@ -31,6 +31,11 @@ namespace meteo
             else
             {
                 nouvellePrevision.TemperatureMax = int.Parse(tBox_Max.Text);
+                if (nouvellePrevision.TemperatureMax < nouvellePrevision.TemperatureMin)
+                {
+                    MessageBox.Show("La température maximale ne peut être en dessous de la température minimale.");
+                    return;
+                }
             }
 
             nouvellePrevision.Ciel = tBox_Ciel.Text;
@@ -67,7 +72,7 @@ namespace meteo
 
             if (double.Parse(tBox_Prob_Pluie.Text) > 1 | double.Parse(tBox_Prob_Pluie.Text) < 0)
             {
-                MessageBox.Show("La probabilitée de la pluie doit �tre en decimal ou positif!");
+                MessageBox.Show("La probabilitée de la pluie doit être en decimal ou positif!");
                 return;
             }
             if (DateTime.Now >= dateTimePicker.Value)
@@ -83,7 +88,7 @@ namespace meteo
             Prevision nouvellePrevision = (Prevision)lb_prevision.SelectedItem;
             if (nouvellePrevision != null)
             {
-                MessageBox.Show("Le " + nouvellePrevision.Date.ToShortDateString() + ", la temperature sera entre " + nouvellePrevision.TemperatureMin.ToString() + " et " + nouvellePrevision.TemperatureMax.ToString() + "�C. Le ciel sera " + nouvellePrevision.Ciel + " et la probablilit�e de pluie est de " + nouvellePrevision.ProbabilitePluie.ToString() + "%. On attend environ " + nouvellePrevision.QuantitePluie.ToString() + "mm et des vent de " + nouvellePrevision.VitesseVent.ToString() + "Km/H.");
+                MessageBox.Show("Le " + nouvellePrevision.Date.ToShortDateString() + ", la température sera entre " + nouvellePrevision.TemperatureMin.ToString() + " et " + nouvellePrevision.TemperatureMax.ToString() + "°C. Le ciel sera " + nouvellePrevision.Ciel + " et la probabilitée de pluie est de " + nouvellePrevision.ProbabilitePluie.ToString() + "%. On attend environ " + nouvellePrevision.QuantitePluie.ToString() + "mm de pluie avec des vent d'une vitesse de " + nouvellePrevision.VitesseVent.ToString() + "Km/H.");
             }
         }
     }

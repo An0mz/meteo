@@ -33,7 +33,7 @@ namespace meteo
         public int TemperatureMax { get => temperatureMax; 
             set
             {
-                if (value > 100)
+                if (value > 101)
                 {
                     temperatureMax = 100;
                 }
@@ -84,5 +84,10 @@ namespace meteo
             }
         }
         public DateTime Date { get => date; set => date = value; }
+
+        public override string? ToString()
+        {
+            return Date.ToShortDateString();
+        }
     }
 }
