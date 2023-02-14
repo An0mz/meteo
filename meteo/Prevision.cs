@@ -15,7 +15,6 @@ namespace meteo
         private int quantitePluie;
         private int vitesseVent;
         private DateTime date;
-        private int fahrenheit;
 
         public int TemperatureMin { get => temperatureMin; 
             set
@@ -92,10 +91,16 @@ namespace meteo
             }
         }
         public DateTime Date { get => date; set => date = value; }
-
         public override string? ToString()
         {
             return Date.ToShortDateString();
+        }
+        public int TemperatureFahrenheit
+        {
+            get
+            {
+                return (temperatureMax * 9 / 5) + 32;
+            }
         }
     }
 }
