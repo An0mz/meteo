@@ -38,7 +38,17 @@ namespace meteo
                 }
             }
 
-            nouvellePrevision.Ciel = tBox_Ciel.Text;
+            int yes;
+            bool isNumeric = int.TryParse(tBox_Ciel.Text, out yes);
+            if (isNumeric == true)
+            {
+                MessageBox.Show("Le format du ciel n'est pas valide!");
+                return;
+            }
+            else
+            {
+                nouvellePrevision.Ciel = tBox_Ciel.Text;
+            }
 
             if (double.TryParse(tBox_Prob_Pluie.Text, out double result2) == false)
             {
