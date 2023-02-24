@@ -93,7 +93,7 @@ namespace meteo
         public DateTime Date { get => date; set => date = value; }
         public override string? ToString()
         {
-            return Date.ToShortDateString();
+            return "Prévision : " + Date.ToShortDateString();
         }
         public int TemperatureFahrenheit
         {

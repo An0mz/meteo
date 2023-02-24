@@ -37,12 +37,9 @@ namespace meteo
                     return;
                 }
             }
-
-            int yes;
-            bool isNumeric = int.TryParse(tBox_Ciel.Text, out yes);
-            if (isNumeric == true)
+            if (tBox_Ciel.Text != "couvert" && tBox_Ciel.Text != "nuageux" && tBox_Ciel.Text != "ensoleillé")
             {
-                MessageBox.Show("Le format du ciel n'est pas valide!");
+                MessageBox.Show("Ne peux être que couvert, nuageux ou ensoleillé");
                 return;
             }
             else

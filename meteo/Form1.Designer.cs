@@ -250,6 +250,5 @@
         private Button btn_afficher;
         private ListBox lb_prevision;
         private DateTimePicker dateTimePicker;
-        private ErrorProvider errorProv;
     }
 }
